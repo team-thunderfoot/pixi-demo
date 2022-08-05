@@ -10,7 +10,7 @@ export const nuxtOptions = {
   trailingSlash: undefined,
 }
 export const options = {
-  vueI18n: {},
+  vueI18n: {"fallbackLocale":"en","messages":{"en":{},"fr":{},"es":{}}},
   vueI18nLoader: false,
   locales: [{"code":"en","name":"English"},{"code":"fr","name":"Français"},{"code":"es","name":"Español"}],
   defaultLocale: "en",

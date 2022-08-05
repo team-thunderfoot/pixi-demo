@@ -10,6 +10,6 @@ You can directly use them in pages and other components without the need to impo
 - `<VContainer>` | `<v-container>` (components/base/foundation/VContainer.vue)
 - `<VRow>` | `<v-row>` (components/base/foundation/VRow.vue)
 - `<VSection>` | `<v-section>` (components/base/components/VSection.vue)
-- `<HeroA>` | `<hero-a>` (components/hero/heroA.vue)
 - `<Footer>` | `<footer>` (components/footer/Footer.vue)
+- `<HeroA>` | `<hero-a>` (components/hero/heroA.vue)
 - `<Preloader>` | `<preloader>` (components/preloader/Preloader.vue)

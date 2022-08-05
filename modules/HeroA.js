@@ -1,4 +1,4 @@
-import video from "@/static/video/hero-bunny-2.mp4";
+import video from "@/static/video/hero-video.mp4";
 import Preload from "@/modules/Preload";
 class HeroA {
     constructor(payload) {

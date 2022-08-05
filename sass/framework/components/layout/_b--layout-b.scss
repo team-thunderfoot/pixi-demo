@@ -1,0 +1,11 @@
+.b--layout-b {
+    position: relative;
+    &__hd {
+        position: fixed;
+        width: 22%;
+        z-index: 50;
+    }
+    &__content {
+        margin-left: 22%;
+    }
+}

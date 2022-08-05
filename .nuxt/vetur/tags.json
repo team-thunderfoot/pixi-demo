@@ -1,0 +1,23 @@
+{
+  "VCol": {
+    "description": "Auto imported from components/base/foundation/VCol.vue"
+  },
+  "VContainer": {
+    "description": "Auto imported from components/base/foundation/VContainer.vue"
+  },
+  "VRow": {
+    "description": "Auto imported from components/base/foundation/VRow.vue"
+  },
+  "VSection": {
+    "description": "Auto imported from components/base/components/VSection.vue"
+  },
+  "HeroA": {
+    "description": "Auto imported from components/hero/heroA.vue"
+  },
+  "Footer": {
+    "description": "Auto imported from components/footer/Footer.vue"
+  },
+  "Preloader": {
+    "description": "Auto imported from components/preloader/Preloader.vue"
+  }
+}

@@ -1,0 +1,23 @@
+// container
+// container fluid
+.f--container {
+    @include make-container();
+    max-width: $g-container-width;
+
+    &--fluid {
+      @include make-container-fluid();
+      @media all and ($viewport-type: 2000px){
+        @include make-container-fluid-responsive();
+      }
+    }
+}
+
+.f--container-custom{
+  margin-left: $measure*8;
+  max-width: 70%;
+  @media all and ($viewport-type: $mobile){
+    margin-left: $measure*4;
+    max-width: 100%;
+    padding-right: $measure *2;
+  }
+}

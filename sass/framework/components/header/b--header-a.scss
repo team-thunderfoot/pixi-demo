@@ -1,0 +1,18 @@
+.b--header-a {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: map-get($color-options, j);
+    padding: $measure*6 0;
+    box-shadow: 0px 3px 6px 0px rgba(map-get($color-options, g), 0.2);
+    z-index: 10;
+    @media all and ($viewport-type: $mobile){
+        padding: $measure*3 0;
+    }
+    &__content{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}

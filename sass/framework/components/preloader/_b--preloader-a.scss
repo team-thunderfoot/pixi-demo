@@ -1,0 +1,104 @@
+.b--preloader-a {
+    position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: map-get($colorbg-options, c);
+  height: 100vh;
+  width: 100vw;
+  z-index: 100;
+  
+    &__spinner {
+        width: 30%;
+        height: 30%;
+        animation: rotate 1.5s ease-in-out infinite;
+        position: relative;
+
+        &__item-left {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 75px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            &__artwork {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                &:nth-child(2) {
+                    background: map-get($color-options, b);
+                    animation: scale 1.5s ease-in-out infinite forwards;
+                }
+
+                &:nth-child(1) {
+                    background: map-get($color-options, e);
+                    animation: scale 1.5s ease-in-out infinite forwards;
+                }
+            }
+        }
+        &__item-right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 75px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            &__artwork {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                &:nth-child(1) {
+                    background: map-get($color-options, a);
+                    animation: scale2 1.5s ease-in-out infinite forwards;
+                }
+
+                &:nth-child(2) {
+                    background: map-get($color-options, c);
+                    animation: scale2 1.5s ease-in-out infinite forwards;
+                }
+            }
+        }
+    }
+    &--is-hidden{
+        pointer-events: none;
+        display: none;   
+    }
+}
+
+@keyframes scale2 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

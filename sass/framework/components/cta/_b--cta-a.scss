@@ -1,0 +1,51 @@
+.b--cta-a {
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+
+    &__bg-items {
+        position: absolute;
+        z-index: 1;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+    }
+    &__ft-items {
+        z-index: 2;
+        padding: $measure * 15 0 $measure * 8;
+        position: relative;
+
+        @media all and($viewport-type:$tablets) {
+            padding: $measure * 10 0 $measure * 7;
+        }
+
+        &:hover &,
+        &:focus &,
+        &:active & {
+            &__link {
+                @include make-link-a-interaction();
+            }
+        }
+
+        &__title {
+            color: map-get($color-options, d);
+            text-transform: uppercase;
+            @include make-font-e();
+            margin-bottom: $measure * 3;
+        }
+
+        &__subtitle {
+            color: map-get($color-options, d);
+            @include make-font-d();
+            margin-bottom: $measure * 3;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+    }
+
+    &__artwork {
+        display: none;
+    }
+}

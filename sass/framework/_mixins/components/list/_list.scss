@@ -1,0 +1,8 @@
+
+@mixin make-li-a(){
+    display: inline-block;
+    &:not(:last-child){
+        margin-right: $measure * 2;
+       
+    }
+}

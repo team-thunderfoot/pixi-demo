@@ -1,0 +1,113 @@
+/*
+    Foundations
+*/
+
+/* Colors */
+
+$color-a:#DEFF29;
+$color-b:#5FC1B2;
+$color-c:#2D7469;
+$color-d:#173D37;
+$color-e:#5F9EC1;
+$color-f:#EEEEEE;
+$color-g:#050505;
+$color-h:#006EB5;
+$color-i:#F7F7F7;
+$color-j:#FFFFFF; 
+$color-k:#EE2C23; 
+$color-l:#D12800; 
+
+$color-options: (
+  a: $color-a,  
+  b: $color-b,
+  c: $color-c,
+  d: $color-d,
+  e: $color-e,
+  f: $color-f,
+  g: $color-g,
+  h: $color-h,
+  j: $color-j,
+  k: $color-k,
+  l: $color-l,
+);
+
+$colorbg-options: ( 
+  a: $color-i,
+  b: $color-j,
+  c: $color-d,
+  );
+
+/* Typography */
+$type-a: 'Proxima Nova', sans-serif;
+$type-b: 'Sohne Breit', sans-serif;
+
+// body default
+$font-body-size: 16px; /* 1rem = 16px */
+$line-height: auto;
+
+/* Grid */
+//Container
+$g-container-width: 100%;
+
+$all: 0;
+$laptop: 1440px;
+$tabletl: 1200px;
+$tabletm: 992px;
+$tablets: 768px;
+$mobile: 600px;
+$viewport-type: max-width;
+$viewport-layouts: (
+  'all': $all,
+  'laptop': $laptop,
+  'tabletl': $tabletl,
+  'tabletm': $tabletm,
+  'tablets': $tablets,
+  'mobile': $mobile,
+);
+$columns: 12;
+$gutter-width: 2rem;
+$half-gutter-width: $gutter-width * 0.5;
+$gutter-compensation: -1 * $half-gutter-width;
+
+// Use for almost all Uitlities:
+// Display, Aspect Ratio, Flex, Float, Justify, Spacing, Text-align
+$breakpoints-grid: (
+  all: $all,
+  laptop: $laptop,
+  tabletl: $tabletl,
+  tabletm: $tabletm,
+  mobile: $mobile,
+) !default;
+
+/*
+    End Foundations
+*/
+
+// Measure
+$measure: 0.5rem; /* 0.5rem = 8px */
+
+// border
+$border-radius-a: 16px;
+
+// box-shadow
+$box-shadow-a: 0px 0px 15px 15px rgba(5, 5, 5, 0.2);
+
+// header height
+$header-height: 120px;
+$header-height-mobile: 72px;
+
+// footer height
+$footer-height: 87px;
+
+// Time
+$time-a: 0.1s; // Micro-interactions such as button and toggle
+$time-b: 0.3s; // Expansion, system communication, toast
+$time-c: 0.6s; // Background dimming 
+
+// Ease
+$ease-standard-a : cubic-bezier(0.2, 0, 0.38, 0.9); //productive
+$ease-standard-b : cubic-bezier(0, 0, 0.3, 1); //expresive
+$ease-entrance-a : cubic-bezier(0, 0, 0.38, 0.9); //productive
+$ease-entrance-b : cubic-bezier(0.4, 0.14, 0.3, 1);  //expresive
+$ease-exit-a : cubic-bezier(0.2, 0, 1, 0.9); //productive
+$ease-exit-b : cubic-bezier(0.4, 0.14, 1, 1); //expresive

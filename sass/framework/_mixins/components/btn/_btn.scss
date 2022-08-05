@@ -1,0 +1,16 @@
+@mixin make-btn-a($colortext, $colorbg) {
+    @include make-font-h();
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    background: map-get($color-options, $colorbg);
+    color: map-get($color-options, $colortext);
+    transition: all $time-b $ease-standard-a;
+    padding: $measure * 1.5 $measure * 4;
+    text-transform: uppercase;
+}
+
+@mixin make-btn-a-interaction($colorhover) {
+    background: map-get($color-options, $colorhover);
+}

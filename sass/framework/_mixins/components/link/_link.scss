@@ -1,0 +1,63 @@
+// link-a
+@mixin make-link-a($colortext) {
+    position: relative;
+    color: map-get($color-options, $colortext);
+    @include make-font-h();
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &::after {
+        transition: all $time-b ease-out;
+        content: "";
+        position: absolute;
+        background-repeat: no-repeat;
+        top: 0;
+        right: $measure * 3 * -1;
+        width: 100%;
+        height: 100%;
+        background-position: right center;
+        background-image: url("@/static/img/link/link-a_arrow.svg");
+    }
+}
+
+@mixin make-link-a-interaction() {
+    &::after {
+        right: $measure * 4 * -1;
+    }
+}
+
+// link b
+@mixin make-link-b($colortext) {
+    background-position: 100% 100%, -30px 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 1px, 0 1px;
+    display: inline;
+    text-decoration: none;
+    background-image: linear-gradient(
+            map-get($color-options, k),
+            map-get($color-options, l)
+        ),
+        linear-gradient(map-get($color-options, k), map-get($color-options, l));
+    color: map-get($color-options, $colortext);
+}
+
+@mixin make-link-b-interaction() {
+    animation: lineLoop $time-b * 6 ease-in-out infinite;
+}
+
+@mixin make-link-b-color($color-text, $color-artwork) {
+    color: map-get($color-options, $color-text);
+    background-image: map-get($color-options, $color-artwork);
+}
+
+@keyframes lineLoop {
+    0% {
+        background-size: 100% 1px, 0 1px;
+        background-position: 100% 100%, -30px 100%;
+    }
+    to {
+        background-size: 0 1px, 100% 1px;
+        background-position: calc(100% + 30px) 100%, 0 100%;
+    }
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "name": "index___es",
+    "path": "/es",
+    "component": "/Applications/XAMPP/xamppfiles/htdocs/pixi-demo/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_50b82668"
+  },
+  {
+    "name": "index___fr",
+    "path": "/fr",
+    "component": "/Applications/XAMPP/xamppfiles/htdocs/pixi-demo/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_50b82668"
+  },
+  {
+    "name": "index___en",
+    "path": "/",
+    "component": "/Applications/XAMPP/xamppfiles/htdocs/pixi-demo/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_50b82668"
+  }
+]

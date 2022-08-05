@@ -1,0 +1,13 @@
+@mixin highlighted-text() {
+mark {
+    @include make-font-d();
+    @include make-bt-a();
+    background: none;
+  }
+}
+
+@mixin highlighted-text-color($_color-a) {
+mark {
+    color: $_color-a;
+  }
+}

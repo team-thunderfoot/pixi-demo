@@ -1,0 +1,41 @@
+.b--cta-b {
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+
+    &__bg-items {
+        position: absolute;
+        overflow: hidden;
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+    }
+    &__ft-items {
+        z-index: 2;
+        padding: $measure * 15 0;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @media all and($viewport-type:$tablets) {
+            padding: $measure * 10 0;
+        }
+
+        &__title {
+            color: map-get($color-options, d);
+            @include make-font-b();
+            margin-bottom: $measure * 4;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+    }
+
+    &__artwork {
+        display: none;
+    }
+}

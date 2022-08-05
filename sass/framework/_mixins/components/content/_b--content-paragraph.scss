@@ -1,0 +1,18 @@
+@mixin paragraphs() {
+  p {
+    @include make-font-h();
+    @include make-bt-a();
+  }
+  em {
+    font-style: italic;
+  }
+  strong {
+    font-weight: bold;
+  }
+}
+
+@mixin paragraphs-color($_color-a) {
+  p {
+    color: $_color-a;
+  }
+}

@@ -1,0 +1,76 @@
+@mixin lists(){
+  ul, ol{
+    @include make-bt-a();
+    padding-left: $measure*2.5;
+    li{
+      @include make-font-h();
+      margin-bottom: $measure*2;
+      ul, ol{
+        margin-top: $measure*2;
+      }
+      ul{
+        padding-left: $measure*2;
+      }
+      ol{
+        list-style: lower-latin;
+        padding-left: $measure*5;
+      }
+    }
+  }
+  ul{
+    list-style-type: disc;
+  }
+  ol{
+    list-style-type: decimal;
+  }
+}
+
+@mixin lists-color($_color-a, $_color-b, $_color-c){
+  ul, ol{
+    li{
+      color: $_color-a;
+    }
+  }
+  ul{
+    li{
+      &::marker{
+        color: $_color-b;
+      }
+      ol{
+        li{
+          &::marker{
+            color: $_color-a;
+          }
+        }
+      }
+    }
+    ul{
+      li{
+        &::marker{
+          color: $_color-c;
+        }
+        ol{
+          li{
+            &::marker{
+              color: $_color-a;
+            }
+          }
+        }
+      }
+    }
+  }
+  ol{
+    li{
+      &::marker{
+        color: $_color-a;
+      }
+    }
+    ul{
+      li{
+        &::marker{
+          color: $_color-b;
+        }
+      }
+    }
+  }
+}

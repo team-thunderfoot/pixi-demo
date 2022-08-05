@@ -1,0 +1,58 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+html{
+    font-size: $font-body-size;
+}
+
+body{
+    background: map-get($color-options, j);
+    font-family:$type-a;
+    font-weight: 400;
+    font-size: $font-body-size;
+    line-height: $line-height;
+    color: map-get($color-options, g);
+    overflow-x: hidden;
+}
+
+:focus {
+    outline: 0;
+}
+
+main{
+    padding-top: $header-height;
+    @media all and ($viewport-type: $mobile){
+        padding-top: $header-height-mobile;
+    }
+    // i explorer
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        display: block;
+    }
+}
+
+b,strong{ font-weight: bold;}
+
+ul, ol {
+    list-style: none;
+}
+img{
+    max-width: 100%;    
+}
+
+button{
+    cursor: pointer;
+    background: transparent;
+    appearance: none;
+}
+
+// remove dotted outline/border in Firefox
+select:-moz-focusring {
+    color: transparent!important;
+    text-shadow: 0 0 0 $color-b!important;
+}

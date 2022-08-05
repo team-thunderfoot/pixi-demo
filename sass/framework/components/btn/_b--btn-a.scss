@@ -1,0 +1,12 @@
+.b--btn-a{
+   @include make-btn-a(j, h);
+
+   &:hover,
+   &:focus{
+    @include make-btn-a-interaction(e);
+   }
+   
+   &__loader{
+    color: map-get($color-options, e);
+   }
+}

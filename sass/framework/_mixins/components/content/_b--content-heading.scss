@@ -1,0 +1,29 @@
+@mixin headings(){
+  h2{
+    @include make-font-d();
+    margin-bottom: $measure * 2;
+    text-align: left;
+  }
+  h3{ 
+    @include make-font-g();
+    @include make-bt-a();
+    padding-top: $measure;
+    text-align: left;
+  }
+  
+  h4{ 
+    @include make-font-e();
+    @include make-bt-a();
+    padding-top: $measure;
+    text-align: center;
+  }
+}
+
+@mixin headings-color($_color-a, $_color-b){
+  h2,h4{   
+    color: $_color-a;
+  }
+  h3{   
+    color: $_color-b;
+  }
+}

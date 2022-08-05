@@ -1,0 +1,99 @@
+.b--lang-select-a {
+    position: relative;
+    &__btn {
+        color: map-get($color-options, h);
+        display: flex;
+        align-items: center;
+        transition: all $time-b $ease-standard-a;
+        &__artwork {
+            height: $measure * 3;
+            margin-right: $measure;
+            path {
+                stroke: map-get($color-options, h);
+                transition: all $time-b $ease-standard-a;
+            }
+        }
+        &__title {
+            @include make-font-f();
+            text-transform: uppercase;
+            padding-right: $measure;
+            @media all and ($viewport-type: $mobile) {
+                display: none;
+            }
+        }
+        &__icon {
+            height: $measure * 0.75;
+            transition: all $time-b $ease-standard-a;
+            @media all and ($viewport-type: $mobile) {
+                display: none;
+            }
+            path {
+                stroke: map-get($color-options, e);
+                transition: all $time-b $ease-standard-a;
+            }
+        }
+        &:hover,
+        &:focus,
+        &:active {
+            color: map-get($color-options, e);
+        }
+        &:hover &,
+        &:focus &,
+        &:active & {
+            &__artwork,
+            &__icon {
+                path {
+                    stroke: map-get($color-options, e);
+                }
+            }
+        }
+    }
+    &__wrapper {
+        position: absolute;
+        top: calc(100% + 20px);
+        left: 0;
+        height: 0;
+        overflow: hidden;
+        pointer-events: none;
+        box-shadow: 0px 3px 6px 0px rgba(map-get($color-options, g), 0.2);
+
+        transition: all $time-b $ease-standard-a;
+        @media all and ($viewport-type: $mobile) {
+            left: auto;
+            right: 0;
+        }
+        &__list-group {
+            padding: $measure * 4 $measure * 3;
+            background-color: map-get($color-options, j);            
+            &__list-item {
+                &:not(:last-child) {
+                    margin-bottom: $measure * 3.75;
+                }
+                &__link {
+                    @include make-font-f();
+                    text-transform: uppercase;
+                    color: map-get($color-options, g);
+                    text-decoration: none;
+                    display: block;
+                    transition: all $time-b $ease-standard-a;
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        color: lighten(map-get($color-options, g), 50%);
+                    }
+                }
+            }
+        }
+    }
+    &--is-active & {
+        &__btn {
+            &__icon {
+                transform: rotate(180deg);
+            }
+        }
+        &__wrapper {
+            height: auto;
+            pointer-events: all;
+        }
+    }
+}

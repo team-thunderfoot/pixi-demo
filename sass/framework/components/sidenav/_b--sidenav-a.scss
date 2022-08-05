@@ -1,0 +1,43 @@
+.b--sidenav-a {
+    padding: $measure * 7 $measure * 3.5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: map-get($color-options, j);
+    box-shadow: 0px 3px 6px 0px rgba(map-get($color-options, g), 0.2);
+    z-index: 5;
+    &__list-group {
+        list-style: none;
+        &__list-item {
+            position: relative;
+            margin-bottom: $measure * 2;
+            cursor: pointer;
+            &:last-child {
+                margin-right: 0;
+            }
+            &__link {
+                @include make-font-f();
+                @include make-link-a($colortext: e);
+                text-transform: uppercase;
+                font-weight: 700;
+                &:hover,
+                &--is-active {
+                    @include make-link-a($colortext: d);
+                }
+            }
+            &__btn {
+                @include make-btn-a($colortext: f, $colorbg: b);
+                @include make-font-h();
+                margin-top: $measure * 5;
+                display: block;
+                font-weight: 700;
+                text-transform: uppercase;
+                line-height: 18.8px;
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+.b--hero-a {
+    position: relative;
+    height: calc(100vh - $header-height);
+    width: 100vw;
+    display: flex;
+    align-items: center;
+
+    &__video {
+        display: none;
+    }
+
+    &__bg-items {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        overflow: hidden;
+    }
+    &__ft-items {
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &__title {
+            @include make-font-a();
+            color: map-get($color-options, j);
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: $measure * 3;
+        }
+        &__subtitle {
+            @include make-font-b();
+            color: map-get($color-options, j);
+            text-align: center;
+            margin-bottom: $measure * 7;
+            @media all and($viewport-type:$tablets) {
+                margin-bottom: $measure * 4;
+            }
+        }
+    }
+}

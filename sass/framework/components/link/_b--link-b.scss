@@ -1,0 +1,6 @@
+.b--link-b {
+    @include make-link-b(g);
+    &:hover,&:focus,&:active{
+        @include make-link-b-interaction();
+    }
+}

@@ -1,0 +1,44 @@
+.b--scroll-a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__title {
+        display: inline-block;
+        @include make-font-h();
+        font-weight: 700;
+        text-transform: uppercase;
+        color: map-get($color-options, j);
+        padding-right: $measure;
+    }
+    &__artwork {
+        fill: map-get($color-options, j);
+        width: $measure * 4;
+        
+
+        &__item {
+            position: relative;
+            transition: all $time-b $ease-standard-a;
+
+            -webkit-animation-name: scrollTween;
+            animation-name: scrollTween;
+            -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+        }
+    }
+}
+
+@keyframes scrollTween {
+    0% {
+        transform: translateY(0);
+    }
+    33% {
+        transform: translateY($measure * 0.5);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

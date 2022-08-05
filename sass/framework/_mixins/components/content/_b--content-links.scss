@@ -1,0 +1,16 @@
+@mixin links(){
+  a {
+    @include make-link-b(c);
+  }
+}
+
+@mixin links-color($_color-a, $_color-b){
+  a {
+    @include make-link-b-color($color-text: $_color-a, $color-artwork: $_color-b);
+    &:hover,
+    &:focus,
+    &:active{
+      @include make-link-b-interaction();
+    }
+  }
+}

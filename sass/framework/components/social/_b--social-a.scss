@@ -1,0 +1,45 @@
+.b--social-a {
+    display: flex;
+    &__list-item {
+        &:not(last-child) {
+            margin-right: $measure * 2;
+        }
+        &__link {
+            display: inline-block;
+            &:not(:last-child) {
+                margin-right: $measure * 3.5;
+                @media all and ($viewport-type: $mobile) {
+                    margin-right: $measure * 4;
+                }
+            }
+            &__icon {
+                height: $measure * 2.5;
+                @media all and ($viewport-type: $mobile) {
+                    height: $measure * 3.75;
+                }
+                &__media {
+                    //position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    margin: auto;
+                    width: 1rem;
+                    height: 1rem;
+
+                    & path,
+                    & polygon,
+                    & rect {
+                        fill: map-get($color-options, a);
+                        transition: all $time-b $ease-standard-a;
+                    }
+                    & circle {
+                        stroke: map-get($color-options, a);
+                        transition: all $time-b $ease-standard-a;
+                        stroke-width: 1;
+                    }
+                }
+            }
+        }
+    }
+}

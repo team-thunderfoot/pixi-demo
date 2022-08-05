@@ -1,0 +1,19 @@
+@mixin make-scrollbar ($color, $colorbg, $width, $paddingright){
+    overflow-y: auto;
+    padding-right: $paddingright;
+    scrollbar-color: map-get($color-options, $color) map-get($color-options, $colorbg); // scrollbar color firefox 
+    scrollbar-width: thin; // scrollbar width firefox 
+    /* width */
+    &::-webkit-scrollbar {
+        width: $width;
+    }
+    /* Track */
+    &::-webkit-scrollbar-track {
+        box-shadow: none;
+        background: map-get($colorbg-options, $colorbg);
+    }
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: map-get($color-options, $color);
+    }
+}

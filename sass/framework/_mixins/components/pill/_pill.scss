@@ -1,0 +1,12 @@
+@mixin make-pill-a ($colortext, $colorbg){
+    position: absolute;
+    z-index: 1;
+    padding: $measure $measure * 4;
+    @include make-font-e();
+    color: map-get($color-options, $colortext);
+    left: 0;
+    top: $measure * 5;
+    background: map-get($colorbg-options, $colorbg);
+    border-radius: 0 $border-radius-a * 2 $border-radius-a * 2 0;
+    text-transform: uppercase;
+}

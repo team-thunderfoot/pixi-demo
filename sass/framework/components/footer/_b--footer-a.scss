@@ -1,0 +1,67 @@
+.b--footer-a {
+    padding: $measure*5 0;
+    background-color: map-get($color-options, h);
+    &__hd{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid map-get($color-options, f);
+        margin-bottom: $measure*5;
+        @media all and ($viewport-type: $mobile) {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: $measure*4;
+        padding-bottom: $measure*4;
+        }
+        &__item-left{
+        margin-bottom: $measure*5;
+        }
+        &__item-right{
+        margin-bottom: $measure*5;
+        @media all and ($viewport-type: $mobile) {
+            margin-bottom: 0;
+        }
+        }
+    }
+    &__ft{
+        display: flex;
+        justify-content: space-between;
+        @media all and ($viewport-type: $mobile) {
+        flex-direction: column;
+        }
+        &__item-left{
+        &__title{
+            @include make-font-f();
+            text-transform: initial;
+            font-weight: 400;
+            color: map-get($color-options, f);
+            @media all and ($viewport-type: $mobile) {
+            margin-bottom: $measure * 0.5;
+            }
+        }
+        }
+        &__item-right{
+        &__link {
+            display: inline-block;
+            &:not(:first-child){
+            &::before{
+                content: " | ";
+                color: map-get($color-options, f);
+            }
+            }
+            &__item {
+                @include make-font-f();
+            font-weight: 400;
+                text-transform: initial;
+                color: map-get($color-options , f );
+                text-decoration: none;
+                transition: all $time-b $ease-standard-a;
+                &:hover, &:focus, &:active {
+                    opacity: .7;
+                }
+            }
+        }
+        }
+    }
+}

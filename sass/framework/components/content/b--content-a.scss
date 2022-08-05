@@ -1,0 +1,15 @@
+.b--content-a{
+    @include headings();
+    @include headings-color($_color-a: map-get($color-options, g), $_color-b: map-get($color-options, g));
+    @include highlighted-text();
+    @include highlighted-text-color(map-get($color-options, b));
+    @include paragraphs();
+    @include paragraphs-color(map-get($color-options, g));
+    @include links();
+    @include links-color($_color-a: g, $_color-b: l);
+    @include lists();
+    @include lists-color($_color-a: map-get($color-options, g), $_color-b: map-get($color-options, b), $_color-c: map-get($color-options, a));
+    *:last-child{
+        margin-bottom: 0;
+    }
+}

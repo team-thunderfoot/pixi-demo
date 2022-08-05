@@ -1,0 +1,89 @@
+@mixin make-font-a {
+    font-family: $type-b;
+    line-height: 60px;
+    font-size: 51.2px;
+    text-transform: uppercase;
+    /* font size should be last element if possible, so 
+    when we changed it on mobile it's easier to see.*/
+    font-size: 3.2rem;
+    @media all and ($viewport-type: $tabletm) {
+        font-size: 35px;
+        line-height: 46px;
+    }
+    @media all and ($viewport-type: $mobile) {
+        font-size: 1.875rem;
+        line-height: 100%;
+    }
+}
+@mixin make-font-b {
+    font-family: $type-a;
+    font-weight: 700;
+    line-height: 51px;
+    font-size: 40px;
+    @media all and ($viewport-type: $tabletm) {
+        font-size: 32px;
+        line-height: 38px;
+    }
+}
+@mixin make-font-c {
+    font-family: $type-a;
+    font-weight: 600;
+    line-height: 58px;
+    font-size: 40px;
+    @media all and ($viewport-type: $tabletm) {
+        font-size: 24px;
+        line-height: 29px;
+    }
+}
+@mixin make-font-d {
+    font-family: $type-a;
+    font-weight: 700;
+    line-height: 36px;
+    font-size: 30px;
+    @media all and ($viewport-type: $tabletm) {
+        font-size: 22px;
+        line-height: 26px;
+    }
+}
+@mixin make-font-e {
+    font-family: $type-a;
+    font-weight: 700;
+    line-height: 22px;
+    text-transform: uppercase;
+    font-size: 18px;
+    @media all and ($viewport-type: $tabletm) {
+        font-size: 1rem;
+        line-height: 19px;
+    }
+}
+@mixin make-font-f {
+    font-family: $type-a;
+    font-weight: 700;
+    line-height: 17px;
+    text-transform: uppercase;
+    font-size: 14px;
+    @media all and ($viewport-type: $tabletm) {
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
+@mixin make-font-g {
+    font-family: $type-a;
+    font-weight: 600;
+    line-height: 29px;
+    font-size: 20px;
+    @media all and ($viewport-type: $tabletm) {
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+@mixin make-font-h {
+    font-family: $type-a;
+    font-weight: 400;
+    line-height: 19px;
+    font-size: 1rem;
+    @media all and ($viewport-type: $tabletm) {
+        font-size: 1rem;
+        line-height: 23px;
+    }
+}

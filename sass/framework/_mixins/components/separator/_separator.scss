@@ -1,0 +1,6 @@
+@mixin make-separator-a($color) {
+    border-bottom: 1px solid map-get($color-options, $color);
+    width: 100%;
+    display: inline-block;
+    margin: $measure * 3 0;
+}
